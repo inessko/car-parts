@@ -1,0 +1,85 @@
+// .wrapper_example {
+//   display: flex;
+//   h1 {
+//     font-size: rem(20)
+//   }
+// }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+.wrapper-home {
+  background: url('../img/bg.jpg') no-repeat;
+  background-size: cover;
+  width: 100vw;
+  max-width: 1920px;
+  height: 100vh;
+  color: white;
+  @media (min-width: $phoneWidth) and (max-width: $smDesktopWidth) {
+    background-position: center right 50%;
+    background-size: cover;
+  }
+  @media (min-width: $smPhoneWidth) and (max-width: $phoneWidth) {
+    background-position: top right 43%;
+  }
+
+  .main-text {
+    @media (min-width: $smPhoneWidth) and (max-width: $phoneWidth) {
+      text-align: center;
+    }
+    h1 {
+      font-size: rem(45px);
+      line-height: rem(53px);
+      font-weight: $normalFontWeight;
+      @media (min-width: $phoneWidth) and (max-width: $tableWidth) {
+        font-size: rem(36px);
+      }
+      @media (min-width: $smPhoneWidth) and (max-width: $phoneWidth) {
+        font-size: rem(25px);
+      }
+    }
+    p {
+      font-size: rem($TextFontSize);
+      line-height: 33px;
+      letter-spacing: 0.06em;
+      max-width: 540px;
+      font-weight: $mainFontWeight;
+      color: $mainFontColor;
+      @media screen and (max-width: $desktopWidth) {
+        font-size: rem(20px);
+        max-width: 400px;
+      }
+    }
+    &-btn {
+      margin-right: 28px;
+      @media screen and (max-width: $desktopWidth) {
+        margin-top: 50px;
+      }
+      @media (min-width: $smPhoneWidth) and (max-width: $phoneWidth) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+.wrapper-catalog {
+  color: $shopMainColorFont;
+}
+.wrapper-show {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  background-color: #000000;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+.wrapper-show.active {
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+}

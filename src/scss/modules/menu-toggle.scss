@@ -1,0 +1,101 @@
+@import 'animation';
+#burger-menu {
+  display: none;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-around;
+  height: 33px;
+  width: 33px;
+  cursor: pointer;
+  @media screen and (max-width: $desktopWidth) {
+    display: flex;
+  }
+
+  span {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+  }
+}
+
+#burger-menu.active {
+  display: none;
+}
+
+#burger-menu.active + .menu-toggle {
+  left: 0;
+  transition: 0.5s ease;
+}
+.show {
+  animation: show 0.5s;
+}
+.hide {
+  animation: hide 0.5s;
+}
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 30px 50px;
+  color: $light-color;
+  z-index: 10;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.5s ease;
+
+  @media (min-width: $smPhoneWidth) and (max-width: $phoneWidth) {
+    width: 100%;
+    left: -102%;
+  }
+
+  &-burger {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: -20px;
+    top: 0;
+    cursor: pointer;
+
+    span {
+      background-color: $light-color;
+      transform: rotate(-45deg);
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: 9px;
+    }
+
+    :first-child {
+      transform: rotate(45deg);
+    }
+  }
+
+  ul {
+    border-bottom: 1px solid rgba(229, 229, 229, 1);
+
+    li {
+      margin-top: 20px;
+    }
+
+    li:first-child {
+      margin: 0;
+    }
+
+    padding: 30px 0;
+  }
+
+  &-phone {
+    display: block;
+    padding: 30px 0;
+    text-align: center;
+    color: #222c35;
+
+    span {
+      color: inherit;
+    }
+  }
+}

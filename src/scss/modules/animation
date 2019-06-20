@@ -1,0 +1,17 @@
+@keyframes show {
+  from {
+    left: -326px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes hide {
+  from {
+    left: 0;
+  }
+  to {
+    left: -326px;
+  }
+}

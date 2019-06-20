@@ -1,0 +1,133 @@
+@import 'utils/libs';
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/fonts';
+
+html {
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  font-style: normal;
+  color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $desktopWidth) {
+    font-size: $mainFontSize;
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: relative;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: $secondaryFontWeight;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+section,
+.section {
+  @media screen and (max-width: $desktopWidth) {
+  }
+  @media screen and (max-width: $desktopWidth) {
+  }
+  @media screen and (max-width: $desktopWidth) {
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+  margin: 0 auto;
+  max-width: $desktopWidth;
+  @media screen and (max-width: $desktopWidth) {
+    max-width: calc(#{$smDesktopWidth} - 20px);
+  }
+  @media (min-width: $tableWidth) and (max-width: $smDesktopWidth) {
+    max-width: calc(#{$tableWidth} - 20px);
+  }
+  @media (min-width: $phoneWidth) and (max-width: $tableWidth) {
+    max-width: calc(#{$phoneWidth} - 20px);
+  }
+  @media (min-width: $smPhoneWidth) and (max-width: $phoneWidth) {
+    max-width: calc(#{$smPhoneWidth} - 20px);
+  }
+}
+
+.main {
+  height: 100%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  @media (min-width: $smPhoneWidth) and (max-width: $phoneWidth) {
+    align-items: flex-start;
+    margin-top: 100px;
+  }
+}
+.btn {
+  width: 180px;
+  border-radius: rem(35px);
+  border: 2px solid $primary-color;
+  font-weight: $boldFontWeight;
+  line-height: rem(42px);
+  text-transform: uppercase;
+  font-size: rem(16px);
+  cursor: pointer;
+  background: none;
+  color: $primary-color;
+}
+.btn:hover {
+  line-height: rem(44px);
+  background: $mainFontColor;
+  color: $success-color;
+  border: none;
+}
+// Modules
+@import 'modules/wrapper.scss';
+@import 'modules/header.scss';
+@import 'modules/menu-toggle.scss';
