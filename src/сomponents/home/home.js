@@ -5,7 +5,7 @@ import TextInfo from './textInfo';
 
 export default function Home() {
   return (
-    <div className="wrapper-home wrapper">
+    <div className="wrapper-home">
       <div className="content-wrapper">
         <Header img={logo} />
         <TextInfo />

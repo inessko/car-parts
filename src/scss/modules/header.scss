@@ -1,6 +1,12 @@
 // header style
+.wrap-header {
+  padding: 0 0 30px 0;
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.1);
+}
+.wrap-header {
+  background-color: white;
+}
 header {
-  padding: 20px 0 30px 0;
   .nav-menu {
     display: flex;
     justify-content: space-between;
@@ -50,7 +56,7 @@ header {
     }
   }
   .nav-phone {
-    display: block;
+    display: flex;
     @media screen and (max-width: $desktopWidth) {
       display: none;
     }
@@ -61,6 +67,8 @@ header {
   .phone {
     font-weight: bold;
     font-size: rem(18px);
+    justify-content: center;
+    flex-direction: column;
     span {
       display: block;
       font-style: normal;
@@ -69,8 +77,7 @@ header {
     }
   }
 }
-.header-catalog {
-  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.1);
+.wrap-header {
   .nav-menu {
     display: flex;
     justify-content: space-between;
@@ -96,19 +103,27 @@ header {
     width: 100%;
     margin-top: 15px;
     height: 45px;
-
+    justify-content: space-between;
+    @media (min-width: $smPhoneWidth) and (max-width: $tableWidth){
+      flex-direction: column;
+      height: auto;
+    }
     &-search {
       display: flex;
       width: 50%;
-      justify-content: space-between;
-
+      @media (min-width: $smPhoneWidth) and (max-width: $tableWidth){
+        width: 100%;
+        height: 45px;
+      }
       &-form {
-        width: 70%;
+        width: 100%;
         height: 100%;
-
+        position: relative;
+        display: flex;
         input {
           width: 100%;
           height: 100%;
+          position: relative;
           padding: 20px;
           border: 2px solid $light-color;
           border-radius: 35px;
@@ -118,11 +133,42 @@ header {
           font-weight: 300;
           font-size: 14px;
           line-height: 0;
+          margin-right: 30px;
+          z-index: 1;
+          @media (min-width: $smPhoneWidth) and (max-width: $smDesktopWidth){
+            margin-right: 0;
+            width: 76%;
+            border-top: 2px solid $light-color;
+            border-left: 2px solid $light-color;
+            border-bottom: 2px solid $light-color;
+            border-right: none;
+            border-radius: 35px 0 0 35px;
+            padding-right: 35px;
+          }
+        }
+        input:hover {
+          border-color: $shopSecondaryColorFont;
+        }
+        button {
+          background-color: white;
+          @media (min-width: $smPhoneWidth) and (max-width: $smDesktopWidth) {
+            width: 30%;
+            height: 100%;
+            right: 0;
+            position: absolute;
+            z-index: 2;
+          }
         }
       }
-
-      button {
-        width: 25%;
+    }
+    &-buttons {
+      @media (min-width: $smPhoneWidth) and (max-width: $tableWidth){
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+      button:first-child {
+        margin-right: 30px;
       }
     }
   }

@@ -38,7 +38,7 @@ class TopNav extends React.Component {
           id="burger-menu"
           role="button"
           tabIndex={0}
-          onClick={() => {}}
+          onClick={this.menuToggle}
           onKeyDown={this.menuToggle}
         >
           <span />

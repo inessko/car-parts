@@ -11,7 +11,7 @@ function MenuToggle(props) {
         className="menu-toggle-burger"
         role="button"
         tabIndex={0}
-        onClick={() => {}}
+        onClick={click}
         onKeyDown={click}
       >
         <span />

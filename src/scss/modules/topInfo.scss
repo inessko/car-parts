@@ -1,0 +1,16 @@
+.top-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .sorting {
+    font-weight: 500;
+    color: #222C35;
+    cursor: pointer;
+  }
+  .sorting:after {
+    content: url("../../img/down-arrow.svg");
+    display: inline-block;
+    transform: rotate(90deg);
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,33 @@
+.btn {
+  width: 180px;
+  border-radius: rem(35px);
+  border: 2px solid $primary-color;
+  line-height: rem(42px);
+  font-size: 1rem;
+  cursor: pointer;
+  background: none;
+  color: $primary-color;
+  transition: .2s ease-in-out;
+  @media (min-width: $tableWidth) and (max-width: $smDesktopWidth){
+    width: 160px;
+  }
+}
+.btn-home {
+  text-transform: uppercase;
+  font-weight: $boldFontWeight;
+  border: 2px solid $primary-color;
+}
+.btn-shop {
+  border: 2px solid #752023;
+  color: #752023;
+}
+.btn-home:hover {
+  line-height: rem(42px);
+  background: $mainFontColor;
+  color: $success-color;
+}
+.btn-shop:hover {
+  line-height: rem(42px);
+  background: #752023;
+  color: white;
+}

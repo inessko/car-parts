@@ -7,7 +7,7 @@ function Logo(props) {
   return (
     <div className="logo">
       <Link to="/">
-        <img src={img} alt="Logo" />
+        <img src={img} alt="Logo2" />
       </Link>
     </div>
   );
