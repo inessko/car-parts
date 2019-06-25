@@ -16,9 +16,10 @@ ul.crumbs-menu {
 
   a {
     font-weight: 300;
-    padding-right: 40px;
     position: relative;
     color: #A2A8C0;
+    display: block;
+    width: 60px;
   }
 
   a:hover {
@@ -31,7 +32,7 @@ ul.crumbs-menu {
     height: 10px;
     background: url("../../img/down-arrow.svg");
     position: absolute;
-    right: 15px;
+    right: 2px;
     padding: 0;
     top: 50%;
     margin-top: -4px;

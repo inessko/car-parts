@@ -2,7 +2,7 @@
   width: 180px;
   border-radius: rem(35px);
   border: 2px solid $primary-color;
-  line-height: rem(42px);
+  line-height: 40px;
   font-size: 1rem;
   cursor: pointer;
   background: none;
@@ -13,6 +13,7 @@
   }
 }
 .btn-home {
+  display: inline-block;
   text-transform: uppercase;
   font-weight: $boldFontWeight;
   border: 2px solid $primary-color;
@@ -20,14 +21,26 @@
 .btn-shop {
   border: 2px solid #752023;
   color: #752023;
+  background-color: white;
 }
 .btn-home:hover {
-  line-height: rem(42px);
   background: $mainFontColor;
   color: $success-color;
 }
 .btn-shop:hover {
-  line-height: rem(42px);
   background: #752023;
+  color: white;
+}
+.btn-product {
+  display: block;
+  width: 136px;
+  font-family: inherit;
+  font-size: 16px;
+  color: $shopMainColorFont;
+  border: 2px solid $shopMainColorFont;
+  font-weight: normal;
+}
+.btn-product:hover {
+  background: $shopMainColorFont;
   color: white;
 }

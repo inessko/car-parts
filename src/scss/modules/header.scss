@@ -150,7 +150,6 @@ header {
           border-color: $shopSecondaryColorFont;
         }
         button {
-          background-color: white;
           @media (min-width: $smPhoneWidth) and (max-width: $smDesktopWidth) {
             width: 30%;
             height: 100%;

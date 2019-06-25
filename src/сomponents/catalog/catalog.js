@@ -4,6 +4,7 @@ import logo from '../../img/logo-shop.svg';
 import Info from './AddInfo';
 import Crumbs from '../crumbs';
 import TopInfo from '../topInfo';
+import WrapCatalog from './wrapCatalog';
 
 export default function Catalog() {
   return (
@@ -16,6 +17,7 @@ export default function Catalog() {
         <div className="container">
           <Crumbs />
           <TopInfo title="Товары" />
+          <WrapCatalog />
         </div>
       </div>
     </div>
