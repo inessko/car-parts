@@ -1,12 +1,11 @@
 import React from 'react';
-import Header from '../header';
-import logo from '../../img/logo-shop.svg';
-import Info from './AddInfo';
-import Crumbs from '../crumbs';
-import TopInfo from '../topInfo';
-import WrapCatalog from './wrapCatalog';
+import Header from './Header';
+import logo from '../img/logo-shop.png';
+import Info from './catalog/AddInfo';
+import Footer from './Footer';
+import Posts from './Posts';
 
-export default function Catalog() {
+export default function ServiceCompany() {
   return (
     <div className="wrapper-catalog wrapper">
       <div className="content-wrapper">
@@ -15,11 +14,10 @@ export default function Catalog() {
           <Info />
         </div>
         <div className="container">
-          <Crumbs />
-          <TopInfo title="Товары" />
-          <WrapCatalog />
+          <Posts />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

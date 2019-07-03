@@ -1,35 +1,49 @@
+@import "../utils/vars";
+
+button.btn {
+  background-color: #752023;
+  color: white;
+  border: none;
+  outline: none;
+  &:hover {
+    color: #fff;
+    outline: none;
+    background: #8C191D;
+  }
+}
 .btn {
   width: 180px;
+  height: 50px;
+  display: inline-block;
   border-radius: rem(35px);
-  border: 2px solid $primary-color;
-  line-height: 40px;
+  line-height: 50px;
   font-size: 1rem;
   cursor: pointer;
-  background: none;
-  color: $primary-color;
   transition: .2s ease-in-out;
+  text-align: center;
   @media (min-width: $tableWidth) and (max-width: $smDesktopWidth){
     width: 160px;
   }
 }
 .btn-home {
-  display: inline-block;
   text-transform: uppercase;
+  background: transparent;
   font-weight: $boldFontWeight;
   border: 2px solid $primary-color;
+  color: $primary-color;
+  &:hover {
+    background: $mainFontColor;
+    color: $success-color;
+  }
 }
 .btn-shop {
   border: 2px solid #752023;
   color: #752023;
   background-color: white;
-}
-.btn-home:hover {
-  background: $mainFontColor;
-  color: $success-color;
-}
-.btn-shop:hover {
-  background: #752023;
-  color: white;
+  &:hover {
+    background: #752023;
+    color: white;
+  }
 }
 .btn-product {
   display: block;
@@ -39,8 +53,55 @@
   color: $shopMainColorFont;
   border: 2px solid $shopMainColorFont;
   font-weight: normal;
+
+  &:hover {
+    background: $shopMainColorFont;
+    color: white;
+  }
+  @media (max-width: $smDesktopWidth) and (min-width: $smPhoneWidth) {
+    width: 90px;
+    font-size: 12px;
+    line-height: 28px;
+    height: 30px;
+  }
 }
-.btn-product:hover {
-  background: $shopMainColorFont;
-  color: white;
+.btn-modal {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222C35;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+  line-height: 14px;
+  transition: .2s ease;
+  position: relative;
+  border-radius: 2px;
+  @media (max-width: $phoneWidth) and (min-width: $smPhoneWidth) {
+    font-size: 12px;
+  }
+  &:after {
+    content: url("../img/down-arrow.svg");
+    display: inline-block;
+    transform: rotate(90deg);
+    margin-left: 10px;
+    right: 0;
+    @media (max-width: 1024px) and (min-width: 768px) {
+      margin-left: 0;
+      margin-right: 20px;
+      right: 0;
+      position: absolute;
+    }
+
+  }
+  @media (max-width: $smDesktopWidth) and (min-width: $smPhoneWidth) {
+    width: 100%;
+    border: 1px solid #757575;
+    box-sizing: border-box;
+    border-radius: 35px;
+    display: block;
+    position: relative;
+  }
 }

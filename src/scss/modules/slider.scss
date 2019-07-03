@@ -1,0 +1,95 @@
+.info-card {
+  width: 100%;
+  height: 450px;
+  padding: 40px 60px;
+  background-color: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  &-right {
+    width: 50%;
+    padding: 30px;
+    &-slider {
+      max-width: 590px;
+      height: 100%;
+      margin-right: 50px;
+      div {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        img {
+          max-width: 100%;
+          width: 300px;
+          margin: 0 auto;
+        }
+      }
+      .slick-next:before {
+        content: url("../../img/right.png");
+      }
+      .slick-prev:before {
+        content: url("../../img/left.png");
+      }
+      .slick-dots {
+        bottom: -20px;
+      }
+      .slick-dots li.slick-active button:before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+
+      }
+      .slick-dots li.slick-active button:before {
+        margin-top: 3px;
+        width: 12px;
+        height: 12px;
+        background: #752023;
+        box-shadow: 0px 2.97398px 7.43494px rgba(197, 50, 56, 0.5);
+      }
+    }
+
+  }
+  &-left {
+    width: 50%;
+    .tabs-right {
+      margin-top: 45px;
+      .rwt__tab:first-child {
+        margin-left: 0;
+      }
+      .rwt__tab {
+        margin-left: 4rem;
+        padding: 1rem 0;
+      }
+      .rwt__tab:not([aria-selected="true"]) {
+        color: #A2A8C0;
+      }
+      .rwt__tablist:not([aria-orientation="vertical"]) {
+         border-bottom: none;
+      }
+      .rwt__tab[aria-selected="false"] {
+        color: #A2A8C0;
+      }
+      .rwt__tab[aria-selected="true"]:hover, .rwt__tab:focus {
+        background-color: inherit;
+        cursor: pointer;
+        color: #222C35;
+      }
+      .rwt__tablist:not([aria-orientation="vertical"]) .rwt__tab[aria-selected="true"]:after {
+        border-bottom: 2px solid #222C35;
+        height: 2px;
+        transition: 0.5s;
+      }
+      .rwt__tab[aria-selected="false"]:hover, .rwt__tab:focus {
+        background-color: transparent;
+        cursor: pointer;
+      }
+      .info-card-left .tabs-right .rwt__tab[aria-selected="false"]:hover {
+        &:after {
+          width: 100%;
+        }
+
+      }
+    }
+  }
+}

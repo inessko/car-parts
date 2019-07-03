@@ -1,12 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Menu from './menu';
-import Phone from './phone';
+import Phone from './Phone';
+import Menu from './MenuItems';
 
+const menuItem = [
+  { id: 1, name: 'Каталог', link: '/catalog' },
+  { id: 2, name: 'Где купить', link: '/catalog' },
+  { id: 3, name: 'О компании', link: '/catalog' },
+  { id: 4, name: 'Партнерам', link: '/catalog' },
+];
 function MenuToggle(props) {
-  const { className, click } = props;
+  const { className, click, style } = props;
   return (
-    <div className={`${className} menu-toggle`}>
+    <div className={`${className} menu-toggle`} style={style}>
       <div
         className="menu-toggle-burger"
         role="button"
@@ -17,7 +23,7 @@ function MenuToggle(props) {
         <span />
         <span />
       </div>
-      <Menu className="menu-toggle-item" />
+      <Menu className="menu-toggle-item" menu={menuItem} />
       <ul className="menu-toggle-item-sub">
         <li>
           <a href="/">Сертификаты</a>
@@ -37,6 +43,7 @@ function MenuToggle(props) {
 MenuToggle.propTypes = {
   className: PropTypes.string,
   click: PropTypes.func.isRequired,
+  style: PropTypes.object.isRequired,
 };
 
 MenuToggle.defaultProps = {

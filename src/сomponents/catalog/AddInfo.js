@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Info() {
   return (
@@ -6,18 +7,18 @@ export default function Info() {
       <div className="ad-info-search">
         <form action="" className="ad-info-search-form">
           <input type="text" placeholder="Что ищем..." />
-          <button className="btn btn-shop" type="button">
+          <button className="btn" type="button">
             Найти
           </button>
         </form>
       </div>
       <div className="ad-info-buttons">
-        <button className="btn btn-shop" type="button">
+        <Link className="btn btn-shop" type="button" to="/">
           Оптовый прайс
-        </button>
-        <button className="btn btn-shop" type="button">
+        </Link>
+        <Link className="btn btn-shop" type="button" to="/">
           Стать партнером
-        </button>
+        </Link>
       </div>
     </div>
   );

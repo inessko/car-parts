@@ -9,7 +9,8 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "prettier": "prettier --write src/**/*.{js,jsx}",
-    "lint": "eslint --fix src/**/*.{js,jsx}"
+    "lint": "eslint --fix src/**/*.{js,jsx}",
+    "server": "json-server --watch server/catalog.json --port 3004"
   },
   "husky": {
     "hooks": {
@@ -36,15 +37,18 @@
     ]
   },
   "dependencies": {
-    "autoprefixer": "on",
+    "axios": "^0.19.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-app-polyfill": "^1.0.1",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "react-slick": "^0.24.0",
+    "react-web-tabs": "^1.0.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "autoprefixer": "on",
     "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",

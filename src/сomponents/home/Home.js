@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../header';
-import logo from '../../img/logo.svg';
-import TextInfo from './textInfo';
+import Header from '../Header';
+import logo from '../../img/logo1.png';
+import TextInfo from './TextInfo';
 
 export default function Home() {
   return (

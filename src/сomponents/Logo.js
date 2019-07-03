@@ -18,7 +18,7 @@ Logo.propTypes = {
 };
 
 Logo.defaultProps = {
-  img: '../img/logo.svg',
+  img: '../img/Logo.svg',
 };
 
 export default Logo;

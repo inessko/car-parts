@@ -1,1 +1,117 @@
 // footer style
+@import "../utils/vars";
+footer {
+  background-color: #222C35;
+  height: 245px;
+  margin-top: 120px;
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+p {
+  order: 2;
+  @media (max-width: $smDesktopWidth) and (min-width: $smPhoneWidth) {
+    margin-top: 30px;
+  }
+}
+    .call {
+      position: absolute;
+      top: -25px;
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      height: 50px;
+      background: #FFFFFF;
+      box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 35px;
+      margin: 0 auto;
+      @media (max-width: $smDesktopWidth) and (min-width: $smPhoneWidth) {
+        background: none;
+        box-shadow: none;
+        position: relative;
+        top: 0;
+        color: white;
+        order: 1;
+      }
+
+      div:first-child:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -1px;
+        margin-top: -12px;
+        height: 24px;
+        width: 1px;
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+
+      div {
+        width: 50%;
+        position: relative;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: $smDesktopWidth) and (min-width: $smPhoneWidth) {
+          margin: 50px auto 0;
+          font-size: 18px;
+          &:first-child {
+            display: none;
+            width: 100%;
+        }
+        }
+
+      }
+    }
+.logo {
+  display: none;
+  @media (max-width: $smDesktopWidth) and (min-width: $smPhoneWidth) {
+    display: block;
+  }
+}
+    .menu {
+      display: flex;
+      color: white;
+      justify-content: center;
+      height: 50%;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      @media (max-width: $smDesktopWidth) and (min-width: $smPhoneWidth) {
+        display: none;
+      }
+      li:first-child {
+        margin: 0;
+      }
+
+      li {
+        margin-left: 32px;
+      }
+    }
+
+    p {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      color: #EDEEF2;
+
+      span {
+        font-weight: 300;
+      }
+    }
+
+  }
+
+}

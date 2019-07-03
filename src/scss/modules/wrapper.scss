@@ -55,9 +55,7 @@
     }
     &-btn {
       margin-right: 28px;
-      @media screen and (max-width: $desktopWidth) {
-        margin-top: 50px;
-      }
+      margin-top: 50px;
       @media (min-width: $smPhoneWidth) and (max-width: $phoneWidth) {
         margin-right: 0;
         margin-bottom: 20px;
@@ -85,4 +83,13 @@
 }
 .wrapper-catalog {
   background-color: #E5E5E5;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .content-wrapper {
+    flex-grow: 2;
+  }
+  footer {
+    flex-grow: 1;
+  }
 }

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import Category from './category';
-import '../../scss/modules/shop/category.scss';
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import Category from './Category';
+import '../../scss/modules/shop/siteBar.scss';
 
 const All = [
   { id: 1, name: 'Бархотка' },
@@ -49,36 +50,59 @@ const items = [
   },
 ];
 
-function SiteBar() {
+function SiteBar(props) {
   const [all, setAll] = useState(All);
   const [car, setCar] = useState(Car);
   const [material, setMaterial] = useState(Material);
+  const [topState, setTopState] = useState(0);
+  const [buttonShow, setButton] = useState(false);
+  const { className } = props;
 
-  function checkedItem(arr, key) {
+  function checkedItem(arr, key, ev) {
+    const topEv = ev.getBoundingClientRect().top + window.pageYOffset;
+    const topSiteBar = ev.closest('.site-bar').getBoundingClientRect().top + window.pageYOffset;
     return arr.map(item => {
       if (item.id === key) {
+        setTopState(() => topEv - topSiteBar);
+        setButton(true);
         return { ...item, checked: !item.checked };
       }
       return item;
     });
   }
 
-  function updateAll(key) {
+  function updateAll(key, top) {
     setAll(prevState => {
-      return checkedItem(prevState, key);
+      return checkedItem(prevState, key, top);
     });
   }
 
-  function updateCar(key) {
+  function updateCar(key, top) {
     setCar(prevState => {
-      return checkedItem(prevState, key);
+      return checkedItem(prevState, key, top);
     });
   }
 
-  function updateMaterial(key) {
+  function updateMaterial(key, top) {
     setMaterial(prevState => {
-      return checkedItem(prevState, key);
+      return checkedItem(prevState, key, top);
     });
+  }
+
+  function Button() {
+    useEffect(() => {
+      const timerID = setTimeout(() => setButton(false), 3000);
+
+      return function cleanup() {
+        clearInterval(timerID);
+      };
+    });
+
+    return (
+      <button onClick={filter} type="button" className="apply" style={style}>
+        Применить
+      </button>
+    );
   }
 
   function filter() {
@@ -108,14 +132,44 @@ function SiteBar() {
     console.log(filteredItems);
   }
 
+  function udDateChecked(func) {
+    func(prevState =>
+      prevState.map(item => {
+        if (item.checked) {
+          setButton(false);
+          return { ...item, checked: !item.checked };
+        }
+        return item;
+      }),
+    );
+  }
+
+  function resetFilter() {
+    udDateChecked(setAll);
+    udDateChecked(setCar);
+    udDateChecked(setMaterial);
+  }
+
+  const style = {
+    top: `${topState - 10}px`,
+  };
   return (
-    <div className="site-bar">
+    <div className={`${className} site-bar`}>
       <Category category={all} updateItem={updateAll} />
       <Category category={car} updateItem={updateCar} title="Автомобили" />
       <Category category={material} updateItem={updateMaterial} title="Материал" />
-      <button onClick={filter}>Filter</button>
+      <button onClick={resetFilter} type="button" className="site-bar-filter-of">
+        Сбросить фильтр
+      </button>
+      {buttonShow ? <Button /> : ''}
     </div>
   );
 }
 
+SiteBar.propTypes = {
+  className: PropTypes.string,
+};
+SiteBar.defaultProps = {
+  className: '',
+};
 export default SiteBar;

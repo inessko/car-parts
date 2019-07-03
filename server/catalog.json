@@ -1,0 +1,166 @@
+{
+  "catalog": [
+    {
+      "id": 1,
+      "name": "Опора 1",
+      "img": "/assets/images/product.png",
+      "alt": "Фото товара 1",
+      "link": "/catalog/link1/",
+      "categories": [
+        1,
+        2
+      ],
+      "cars": [
+        3,
+        5
+      ],
+      "materials": [
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Опора 2",
+      "img": "/assets/images/product.png",
+      "alt": "Фото товара 2",
+      "link": "/catalog/link2",
+      "categories": [
+        2,
+        3
+      ],
+      "cars": [
+        1,
+        2
+      ],
+      "materials": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Опора карданного вала 103",
+      "img": "/assets/images/product.png",
+      "alt": "Фото товара 3",
+      "link": "/catalog/link3",
+      "categories": [
+        3,
+        4
+      ],
+      "cars": [
+        2,
+        3
+      ],
+      "materials": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Патрубки системы охлаждения 2112",
+      "img": "/assets/images/product.png",
+      "link": "/catalog/link4",
+      "alt": "Фото товара 2",
+      "categories": [
+        2,
+        3
+      ],
+      "cars": [
+        1,
+        2
+      ],
+      "materials": [
+        1
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Патрубки системы охлаждения 2112",
+      "img": "/assets/images/product.png",
+      "alt": "Фото товара 2",
+      "link": "/catalog/link5",
+      "categories": [
+        2,
+        3
+      ],
+      "cars": [
+        1,
+        2
+      ],
+      "materials": [
+        1
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Патрубки системы охлаждения 2112",
+      "img": "/assets/images/product.png",
+      "alt": "Фото товара 2",
+      "link": "/catalog/link6",
+      "categories": [
+        2,
+        3
+      ],
+      "cars": [
+        1,
+        2
+      ],
+      "materials": [
+        1
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Патрубки системы охлаждения 2112",
+      "img": "/assets/images/product.png",
+      "alt": "Фото товара 2",
+      "link": "/catalog/link7",
+      "categories": [
+        2,
+        3
+      ],
+      "cars": [
+        1,
+        2
+      ],
+      "materials": [
+        1
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Патрубки системы охлаждения 2112",
+      "img": "/assets/images/product.png",
+      "link": "/catalog/link8",
+      "alt": "Фото товара 2",
+      "categories": [
+        2,
+        3
+      ],
+      "cars": [
+        1,
+        2
+      ],
+      "materials": [
+        1
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Патрубки системы охлаждения 2112",
+      "img": "/assets/images/product.png",
+      "link": "/catalog/link9",
+      "alt": "Фото товара 2",
+      "categories": [
+        2,
+        3
+      ],
+      "cars": [
+        1,
+        2
+      ],
+      "materials": [
+        1
+      ]
+    }
+  ]
+}

@@ -1,7 +1,17 @@
-
+@import "../../utils/vars";
 .shop-list {
-  width: 80%;
+  width: 70%;
+  position: relative;
+  flex-basis: 70%;
   max-width: 920px;
+  @media screen and (min-width: $desktopWidth) {
+    width: 80%;
+    flex-basis: 80%;
+  }
+  @media (max-width: $smDesktopWidth) and (min-width: $smPhoneWidth) {
+    width: 100%;
+    flex-basis: 100%;
+  }
   &-items {
     width: 100%;
     display: flex;
@@ -20,6 +30,21 @@
       background-color: white;
       text-align: center;
       padding: 25px 30px 15px 30px;
+      @media (max-width: $smDesktopWidth) and (min-width: $smPhoneWidth) {
+        margin-top: 5px;
+      }
+      @media (max-width: $tableWidth) and (min-width: $smPhoneWidth) {
+        height: 270px;
+      }
+      @media (max-width: $smDesktopWidth) and (min-width: $tableWidth) {
+        max-width: 185px;
+        padding: 25px 10px;
+      }
+      @media (max-width: $tableWidth) and (min-width: $smPhoneWidth) {
+        max-width: 150px;
+        padding: 25px 10px;
+        margin-left: 0;
+      }
 
       img {
         width: 100%;
@@ -33,9 +58,13 @@
         font-weight: 300;
         font-size: 14px;
         line-height: 16px;
+        @media (max-width: $phoneWidth) and (min-width: $smPhoneWidth) {
+          font-size: 12px;
+        }
       }
       a {
-        margin: 25px auto 0;
+        margin: 15px auto 0;
+
       }
     }
   }

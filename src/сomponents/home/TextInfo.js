@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function TextInfo() {
   return (
@@ -6,12 +7,12 @@ export default function TextInfo() {
       <div className="main-text container">
         <h1 className="title1">Ремонт автомобилей</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatibus.</p>
-        <button className="btn btn-home main-text-btn" type="button">
+        <Link className="btn btn-home main-text-btn" to="/">
           Услуги
-        </button>
-        <button className="btn btn-home" type="button">
-          О Бренде
-        </button>
+        </Link>
+        <Link className="btn btn-home" to="/catalog">
+          Каталог
+        </Link>
       </div>
     </section>
   );

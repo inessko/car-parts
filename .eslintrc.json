@@ -5,13 +5,12 @@
     "allowImportExportEverywhere": false,
     "codeFrame": false
   },
-  "extends": ["airbnb", "prettier"],
+  "extends": ["airbnb", "prettier", "react-app"],
   "env": {
     "browser": true,
     "jest": true
   },
   "plugins": [
-    "react-app",
     "react-hooks"
   ],
   "rules": {

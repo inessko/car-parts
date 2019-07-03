@@ -1,6 +1,8 @@
 @import 'animation';
 #burger-menu {
   display: none;
+  outline: none;
+  outline-offset: 0;
   flex-direction: column;
   align-content: space-between;
   justify-content: space-around;
@@ -15,6 +17,8 @@
     width: 100%;
     height: 2px;
     background-color: white;
+    outline: none;
+    outline-offset: 0;
   }
 }
 
@@ -27,25 +31,23 @@
   transition: 0.5s ease;
 }
 .show {
-  animation: show 0.5s;
 }
 .hide {
   animation: hide 0.5s;
 }
 .menu-toggle {
+  position: fixed;
+  top: 0;
+  z-index: 15;
   display: flex;
   flex-direction: column;
-  position: fixed;
-  left: 0;
-  top: 0;
+  background-color: white;
   width: 320px;
   height: 100%;
-  background-color: #ffffff;
   padding: 30px 50px;
   color: $light-color;
-  z-index: 10;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  transition: 0.5s ease;
+  transition: 0.3s linear;
 
   @media (min-width: $smPhoneWidth) and (max-width: $phoneWidth) {
     width: 100%;
@@ -55,9 +57,12 @@
     width: 20px;
     height: 20px;
     position: relative;
+    outline: none;
     left: -20px;
     top: 0;
     cursor: pointer;
+    outline: 0;
+    outline-offset: 0;
 
     span {
       background-color: $light-color;

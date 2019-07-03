@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TopNav from './topNav';
-import Phone from './phone';
+import TopNav from './TopNav';
+import Phone from './Phone';
 
 function Header(props) {
   const { img } = props;
@@ -20,7 +20,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  img: '../img/logo.svg',
+  img: '../img/Logo.svg',
 };
 
 export default Header;

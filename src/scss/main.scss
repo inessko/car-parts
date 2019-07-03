@@ -26,11 +26,54 @@ body {
   padding: 0;
   font-family: $mainFont;
   font-size: $mainFontSize;
-  font-weight: $mainFontWeight;
+  font-weight: $normalFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   position: relative;
+  min-height: 100%;
+  h2.title2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  &.modal-open {
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+  .shadow-bg {
+    display: block;
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    @media screen and (min-width: $smDesktopWidth) {
+      display: none;
+    }
+  }
+  .loader {
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+    &-animation {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      border: 5px solid black;
+      border-top-color: white;
+      animation: 2s loader-spin infinite linear;
+    }
+  }
 }
 
 *,
@@ -76,6 +119,8 @@ section,
   flex-direction: column;
   min-height: 100vh;
   height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
@@ -85,16 +130,16 @@ section,
   margin: 0 auto;
   max-width: $desktopWidth;
   @media screen and (max-width: $desktopWidth) {
-    max-width: calc(#{$smDesktopWidth} - 20px);
+    max-width: $smDesktopWidth;
   }
   @media (min-width: $tableWidth) and (max-width: $smDesktopWidth) {
-    max-width: calc(#{$tableWidth} - 20px);
+    max-width: $tableWidth;
   }
   @media (min-width: $phoneWidth) and (max-width: $tableWidth) {
-    max-width: calc(#{$phoneWidth} - 20px);
+    max-width: $phoneWidth;
   }
   @media (min-width: $smPhoneWidth) and (max-width: $phoneWidth) {
-    max-width: calc(#{$smPhoneWidth} - 20px);
+    max-width: calc(#{$smPhoneWidth} - 10px);
   }
 }
 
@@ -117,3 +162,4 @@ section,
 @import 'modules/menu-toggle.scss';
 @import 'modules/button.scss';
 @import 'modules/title.scss';
+@import 'modules/animation';
