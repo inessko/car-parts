@@ -1,1 +1,1 @@
-# 😊 My First React App 😊
+# React App Avto
